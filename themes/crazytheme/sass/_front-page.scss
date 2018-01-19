@@ -1,0 +1,153 @@
+//intro
+.introduction {
+    background-color: $intro;
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 0 20px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include home-title;
+        font-weight: 500;
+    text-transform: initial;
+    &:after {
+        @include slant-left;
+        height: 60%;
+        transform: skewY(-2.5deg);
+        bottom: -24px;
+    }
+    p {
+        margin: 40px 0px;
+    }
+}
+
+//project
+.featured-project {
+    background-color: $featureblue;
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+    &:before {
+        @include slant-right;
+    }
+    &:after {
+        @include slant-left;
+    }
+    h4{
+        @include home-title;
+    }
+}
+
+//hiring
+.hiring {
+    padding: 0 20px;
+    background-color: $workblue;
+    position: relative;
+    z-index: 1;
+    h4 {
+        color: white;
+        text-align: right;
+        @include home-title;
+    }
+    &:before {
+        @include slant-left;
+        transform: skewY(-5.5deg);
+        top: -61px;
+        height: 66px;
+    }
+}
+
+//timeline
+#work-timeline {
+    width: 100%;
+    position: relative;
+    font-family: $opensans;
+    font-weight: 100;
+    .timeline-item {
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+    }
+    &:before {
+        content: "";
+        width: 2px;
+        background: $star;
+        left: 15px;
+        top: -96px;
+        position: absolute;
+        height: 607px;
+    }
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+        width: 100%;
+    }
+    .timeline-item {
+        position: relative;
+        .timeline-year {
+            width: 60px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            margin-left: -23px;
+            .fa {
+                position: relative;
+                top: 13px;
+                left: 22px;
+                color: $star;
+                font-size: 37px;
+            }
+        }
+        .timeline-content {
+            width: 90%;
+            float: right;
+            padding: 20px;
+            color: white;
+            h2 {
+                padding: 15px;
+                margin: -20px -20px 0 -20px;
+            }
+            p {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+//about
+.about {
+    background-color: $aboutblue;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-family: $opensans;
+    font-weight: 100;
+    &:before {
+        @include slant-right;
+        -webkit-transform: skewY(6.5deg);
+        transform: skewY(6.5deg);
+    }
+    &:after{
+        @include slant-right;
+        top: initial;
+    }
+    h4 {
+        margin: 0px;
+        @include home-title;
+    }
+    a {
+        @include cta;
+        font-size: 18px;
+    }
+}

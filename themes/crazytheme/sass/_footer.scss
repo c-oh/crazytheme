@@ -1,0 +1,14 @@
+.site-footer {
+    background-color: $footerred;
+    padding-top: 63px;
+    .site-info {}
+    p {
+        margin: 0px;
+        color: white;
+        -webkit-transform: rotate(16deg);
+        -moz-transform: rotate(16deg);
+        -o-transform: rotate(16deg);
+        -ms-transform: rotate(16deg);
+        transform: rotate(16deg);
+    }
+}

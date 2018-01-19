@@ -1,0 +1,62 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin slant-right{
+	background: inherit;
+      content: '';
+      display: block;
+      height: 56px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+      top: 0;
+      transform: skewY(3.5deg);
+      transform-origin: 100% 0;
+}
+
+@mixin slant-left{
+	bottom: 0;
+    transform: skewY(-1.5deg);
+	transform-origin: 100%;
+	background: inherit;
+      content: '';
+      display: block;
+      height: 56px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+}
+@mixin cta{
+	background-color: $ctared;
+	color: white;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	text-align: center;
+	width: 130px;
+	padding: 10px 0px;
+	border-radius: 50px;
+      font-weight: bold;
+      font-family: $button;
+}
+
+@mixin home-title{
+      font-family: $londrina;
+      text-transform: uppercase;
+      font-size: 25px;
+}
